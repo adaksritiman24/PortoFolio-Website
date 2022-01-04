@@ -1,0 +1,37 @@
+.banner{
+    background: linear-gradient(rgb(33,37,41), rgb(72, 77, 78));
+    color: white;
+}
+.b-center{
+    display: flex;
+ 
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    align-items: center;
+}
+.myinfo{
+    padding: 7vw 3vw;
+    padding-right: 3vw;
+
+    max-width: 800px;
+}
+.myinfo h3{
+    font-size: 30px;
+}
+.myinfo h2{
+    font-size: 70px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.myinfo p{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-stretch: narrower;
+    font-size: 25px;
+    font-weight: lighter;
+}
+
+.mypic{
+    /* border: 2px solid green; */
+}
+.mypic img{
+    width: 25vw;
+}

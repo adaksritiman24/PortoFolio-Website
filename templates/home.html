@@ -1,7 +1,19 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
-
-<h1>Hello, Sritiman Here</h1>
-
+<div class="banner">
+    <div class="container">
+        <div class="b-center">
+            <div class="myinfo">
+                <h3>Hello There! I am</h3>
+                <h2>Sritiman Adak</h2>
+                <p>I am a Computer Science Engineering Student and currently persuing Btech from Techno Main Salt Lake, Kolkata.<br><strong>Welcome To my Website !!</strong></p>
+                <a href="" class="btn btn-outline-success btn-lg">Contact Me</a>
+            </div>
+            <div class="mypic">
+                <img src="{% static 'imgs/my-img.png' %}" alt="not Found">
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
