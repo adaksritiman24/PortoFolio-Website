@@ -7,13 +7,37 @@
             <div class="myinfo">
                 <h3>Hello There! I am</h3>
                 <h2>Sritiman Adak</h2>
-                <p>I am a Computer Science Engineering Student and currently persuing Btech from Techno Main Salt Lake, Kolkata.<br><strong>Welcome To my Website !!</strong></p>
+                <p>I am a Computer Science Engineering Student and currently persuing Btech from Techno Main Salt Lake, Kolkata.</p>
+                <p class="mt-2"><strong>Welcome To my Website !!</strong></p>
                 <a href="" class="btn btn-outline-success btn-lg">Contact Me</a>
             </div>
             <div class="mypic">
                 <img src="{% static 'imgs/my-img.png' %}" alt="not Found">
             </div>
         </div>
+        <div class="b-bottom">
+            <span>My Projects</span>
+            <i class="bi bi-arrow-down-circle-fill"></i>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row justify-content-center align-item-center m-2">
+        {% for project in projects %}
+        <a class="col-md-5 project-banner m-2" href="{{project.link}}">
+            <div class="row">
+                <div class="col-4 thumbnail">           
+                    <img src="{{project.image.url}}" alt="Not-found" class="img-fluid">
+            
+                </div>
+                <div class="col-8">
+                    <h3>{{project.title}}</h3>
+                    <p class="p-date"><u>{{project.date}}</u></p>
+                    <p class="project-desc">{{project.desc}}</p>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
     </div>
 </div>
 {% endblock %}

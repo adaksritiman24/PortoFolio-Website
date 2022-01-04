@@ -14,3 +14,9 @@ class Author(models.Model):
 
     image = models.ImageField(upload_to = "author")
 
+class Project(models.Model):
+    title = models.CharField(max_length=100)
+    date = models.DateField()
+    desc = models.CharField(max_length=300)
+    image = models.ImageField(upload_to = 'project_imgs')
+    link = models.CharField(max_length=300, null=True)

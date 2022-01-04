@@ -1,3 +1,6 @@
+body, html{
+    background: rgb(123, 125, 126);
+}
 .banner{
     background: linear-gradient(rgb(33,37,41), rgb(72, 77, 78));
     color: white;
@@ -10,10 +13,11 @@
     align-items: center;
 }
 .myinfo{
-    padding: 7vw 3vw;
+    padding: 5vw 3vw;
     padding-right: 3vw;
 
     max-width: 800px;
+    animation: fadefromleft 2s ease-out forwards;
 }
 .myinfo h3{
     font-size: 30px;
@@ -27,11 +31,100 @@
     font-stretch: narrower;
     font-size: 25px;
     font-weight: lighter;
+
 }
 
 .mypic{
-    /* border: 2px solid green; */
+    padding-top: 50px;
+    margin: 20px;
+    border-top-left-radius: 100%;
+    border-top-right-radius: 100%;
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(rgb(211, 6, 6),rgb(83, 53, 53));
+    box-shadow: 0px 0px 11px 4px rgb(39, 39, 39);
 }
 .mypic img{
-    width: 25vw;
+    position: relative;
+    width: 70%;
+    animation: fadeshow 4s ease-out forwards;
+    /* animation-delay: 2s; */
+}
+.b-bottom{
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+    font-size: 29px;
+    color: rgb(178, 245, 178);
+}
+@keyframes fadeshow {
+    0%{
+       opacity: 0; 
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes fadefromleft {
+    0%{
+       opacity: 0;
+       transform: translateX(-100%); 
+    }
+    
+    100%{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+/* projects  */
+
+.project-banner{
+    border-radius: 5px;
+    margin: 20px;
+    padding: 20px;
+    background: rgb(213, 216, 216);
+    box-shadow: 1px 2px 10px 4px rgb(87, 86, 86);
+    text-decoration: none;
+    transition: 0.7s;
+    animation: cometotop 3s ease-out forwards;
+}
+.project-banner:hover{
+    box-shadow: 1px 2px 10px 4px rgb(58, 57, 57);
+    
+}
+.project-banner h3 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(15, 15, 15);
+    font-weight: bold;
+}
+.project-desc{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(46, 45, 45);
+}
+.p-date{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    color: gray;
+}
+
+@keyframes cometotop {
+    0%{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    50%{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0%);
+    }
 }
