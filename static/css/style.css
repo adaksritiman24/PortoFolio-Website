@@ -1,19 +1,32 @@
+*{
+    box-sizing: border-box;
+}
 body, html{
-    background: rgb(123, 125, 126);
+    background: rgb(203, 205, 206);
+   
 }
 .banner{
-    background: linear-gradient(rgb(33,37,41), rgb(72, 77, 78));
+    background-image: url('/static/imgs/bg.jpg');
     color: white;
 }
+#contact-btn{
+    box-sizing: border-box;
+    transition: 0.5s ease-out;
+}
+#contact-btn:hover{
+    /* background-color: red; */
+    transform: scale(1.1);
+}
+
 .b-center{
     display: flex;
- 
+    padding-top: 4vw;
     justify-content: center;
     flex-wrap: wrap-reverse;
     align-items: center;
 }
 .myinfo{
-    padding: 5vw 3vw;
+    padding: 5vw 2vw;
     padding-right: 3vw;
 
     max-width: 800px;
@@ -35,24 +48,12 @@ body, html{
 }
 
 .mypic{
-    padding-top: 50px;
-    margin: 20px;
-    border-top-left-radius: 100%;
-    border-top-right-radius: 100%;
-    border-bottom-left-radius: 30%;
-    border-bottom-right-radius: 30%;
+    animation: fadeshow 2s ease-out forwards;
     overflow: hidden;
-    display: flex;
-    justify-content: center;
-    background: linear-gradient(rgb(211, 6, 6),rgb(83, 53, 53));
-    box-shadow: 0px 0px 11px 4px rgb(39, 39, 39);
+    box-sizing: border-box;
 }
-.mypic img{
-    position: relative;
-    width: 70%;
-    animation: fadeshow 4s ease-out forwards;
-    /* animation-delay: 2s; */
-}
+
+
 .b-bottom{
     margin: 0;
     padding: 5px;
@@ -63,12 +64,11 @@ body, html{
 @keyframes fadeshow {
     0%{
        opacity: 0; 
-    }
-    50%{
-        opacity: 0;
+       transform: translateX(100%); 
     }
     100%{
         opacity: 1;
+        transform: translateX(0%); 
     }
 }
 @keyframes fadefromleft {
@@ -83,35 +83,58 @@ body, html{
     }
 }
 
+
 /* projects  */
 
-.project-banner{
-    border-radius: 5px;
-    margin: 20px;
-    padding: 20px;
-    background: rgb(213, 216, 216);
-    box-shadow: 1px 2px 10px 4px rgb(87, 86, 86);
-    text-decoration: none;
-    transition: 0.7s;
-    animation: cometotop 3s ease-out forwards;
+*{
+    box-sizing: border-box;
 }
-.project-banner:hover{
-    box-shadow: 1px 2px 10px 4px rgb(58, 57, 57);
+
+.project-banner{
+    border-radius: 2px;
+    margin: 20px;
+    background: rgb(252, 249, 250);
+    height: 180px;
+    overflow: hidden;
+    box-shadow: 0px 13px 14px 0px rgb(129, 129, 129);
+    text-decoration: none;
+    transition: all 0.2s;
+    animation: cometotop 3s ease-out forwards;
+    left: 0px;
+    backface-visibility: hidden;
     
 }
+
+.project-banner:hover{
+    transform: scaleX(1.6);
+    border: 2px solid transparent;
+}
+
 .project-banner h3 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: rgb(15, 15, 15);
     font-weight: bold;
+    margin: 5px;
 }
 .project-desc{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgb(46, 45, 45);
+    
 }
 .p-date{
     font-family: Arial, Helvetica, sans-serif;
     font-style: italic;
-    color: gray;
+    color: rgb(204, 199, 199)
+}
+.thumbnail{
+    height: 160px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.project-top{
+    background: linear-gradient(rgb(121, 1, 1), rgb(230, 18, 18));
+    position: relative;
+    border-bottom-left-radius: 20px;
+    color: aliceblue;
 }
 
 @keyframes cometotop {
