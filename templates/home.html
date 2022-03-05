@@ -1,24 +1,26 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div class="banner">
+<div class="banner" id="bg-banner">
     <div class="container">
         <div class="b-center">
             <div class="myinfo">
                 <h3>Hello There! I am</h3>
                 <h2>Sritiman Adak</h2>
                 <hr>
-                <p>I am a Computer Science Engineering Student and currently persuing Btech from Techno Main Salt Lake, Kolkata.</p>
+                <p>I am a Computer Science Engineering Student and currently persuing Btech from Techno Main Salt Lake,
+                    Kolkata.</p>
                 <p class="mt-2"><strong>Welcome To my Website !!</strong></p>
                 <a href="" class="btn btn-success btn-lg" id="contact-btn">Contact Me</a>
             </div>
             <div class="mypic d-flex justify-content-center">
                 <svg height="400px" width="400px">
-                    <polygon points="40,198 0,400 360,400, 280,140" style="fill:rgba(83, 73, 231, 0.6);" stroke-linejoin: "round" />
-                    <image href = "/static/imgs/my-img.png" x="0" y="85" height="330" width="370"/>
+                    <polygon points="40,198 0,400 360,400, 280,140" style="fill:rgba(83, 73, 231, 0.6);"
+                        stroke-linejoin: "round" />
+                    <image href="/static/imgs/my-img.png" x="0" y="85" height="330" width="370" />
                 </svg>
             </div>
-            
+
         </div>
         <div class="b-bottom">
             <span>My Projects</span>
@@ -31,9 +33,9 @@
         {% for project in projects %}
         <a class="col-md-5 project-banner m-3" href="{{project.link}}">
             <div class="row">
-                <div class="col-4 thumbnail">           
+                <div class="col-4 thumbnail">
                     <img src="{{project.image.url}}" alt="Not-found" class="img-fluid">
-            
+
                 </div>
                 <div class="col-8 project-top">
                     <h3>{{project.title}}</h3>
@@ -45,5 +47,42 @@
         </a>
         {% endfor %}
     </div>
+</div>
+<div class="edu-section" id = "edu-section-id">
+    <h2 class="text-center mt-5 mb-3">Education</h2>
+    <hr>
+    <div class="container edu-main">
+        <div class="edu-holder" onclick="sendToPage('www.southpoint.edu.in')" style="cursor: pointer;">
+            <div><i class="fas fa-school fa-3x"></i></div>
+            <h3>
+                South Point High School
+                
+            </h3>
+                <div>till 2018</div>
+        </div>
+        <div class="edu-holder" onclick="sendToPage('ticollege.ac.in')" style="cursor: pointer;">
+            <div><i class="fas fa-graduation-cap fa-3x"></i></div>
+            <h3>
+                Techno Main Salt Lake (UG)
+            </h3>
+            <div>2018-2022</div>
+        </div>
+    </div>
+</div>
+<div class="location-section">
+    <div class="location-info">
+        <h2>Location</h2>
+        <hr>
+        <p><strong>City: </strong>Kolkata, India</p>
+        <p><strong>Address: </strong> 22, Surya Sen Pally, Haridevpur, Kolkata - 700082</p>
+        <p><strong>State: </strong>West Bengal</p>
+        <p><strong>Pin Code: </strong>700082</p>
+    </div>
+    <div class="location-map">
+        <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6115.872069717836!2d88.33199414146179!3d22.472770881584864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027088c7180563%3A0x2888345158de2873!2sSurya%20Sen%20Pally%2C%20Haridevpur%2C%20Paschim%20Putiary%2C%20Kolkata%2C%20West%20Bengal%20700041!5e0!3m2!1sen!2sin!4v1646463569746!5m2!1sen!2sin"
+        width="350vh" height="300vh" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    
 </div>
 {% endblock %}
