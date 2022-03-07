@@ -15,3 +15,17 @@ const sendToPage = (page)=>{
     a.target = "_blank";
     a.click();
 }
+
+var selector = document.getElementById("selector");
+
+const moveSelector=(type)=>{
+    if(type === "about"){
+        selector.style.transform = "translateX(6px)";
+    }
+    if(type === "home"){
+        selector.style.transform = "translateX(-61px)";
+    }
+    if(type === "contact"){
+        selector.style.transform = "translateX(68px)";
+    }
+}
