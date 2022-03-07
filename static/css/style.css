@@ -157,8 +157,13 @@ body, html{
 .edu-section{
     background-color: rgb(155, 156, 156);
     margin-top: 20px;
-    padding: 20px 0px;
-    padding-top: 0px;
+    padding: 10px 0px;
+    font-family: 'Alfa Slab One', cursive;
+    font-family: 'Bree Serif', serif;
+    font-family: 'Fredoka', sans-serif;
+}
+.edu-section > h2{
+    font-weight: bold;
 }
 .edu-main{
    
@@ -170,13 +175,16 @@ body, html{
 
 .edu-holder{
     padding: 34px;
-    margin: 10px;
-    background: rgb(30, 30, 31);
+    margin: 15px 0px;
+    background: rgb(37, 37, 37);
     color: rgb(228, 181, 93);
-    width: 65vh;
+    width: 55vh;
     height: 25vh;
     border-radius: 5px;
-    box-shadow: 1px 2px 15px 4px rgb(102, 100, 100);
+    transition: 0.4s;
+}
+.edu-holder:hover{
+    transform: scale(1.03);
 }
 .edu-holder > div, .edu-holder> h3 {
     text-align: center;
