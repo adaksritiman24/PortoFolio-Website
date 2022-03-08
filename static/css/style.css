@@ -12,6 +12,7 @@ body, html{
     background-image: url('/static/imgs/bg.jpg');
     color: white;
     box-shadow: 0px 5px 15px 10px gray;
+
 }
 #contact-btn{
     box-sizing: border-box;
@@ -25,9 +26,9 @@ body, html{
 .b-center{
     display: flex;
     padding-top: 4vw;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-wrap: wrap-reverse;
-    align-items: center;
+    align-items: flex-end;
 }
 .myinfo{
     padding: 5vw 2vw;
@@ -55,6 +56,13 @@ body, html{
     animation: fadeshow 2s ease-out forwards;
     overflow: hidden;
     box-sizing: border-box;
+    background-color: rgba(127, 101, 187, 0.66);
+    padding: 5px;
+    padding-bottom: 0px;
+    border-radius: 50%;
+    width: 20rem;
+    height: 20rem;
+    margin-top: 70px;
 }
 
 
@@ -321,7 +329,6 @@ footer{
 }
 
 .email-info{
-
     font-size: 22px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: bold;

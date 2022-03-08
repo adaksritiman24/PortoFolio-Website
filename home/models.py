@@ -1,3 +1,4 @@
+from pyexpat import model
 from django.db import models
 
 # Create your models here.
@@ -20,3 +21,9 @@ class Project(models.Model):
     desc = models.CharField(max_length=300)
     image = models.ImageField(upload_to = 'project_imgs')
     link = models.CharField(max_length=300, null=True)
+
+class Message(models.Model):
+    fname = models.CharField(max_length=30)
+    lname = models.CharField(max_length=30)
+    email = models.EmailField(null=True)
+    message = models.TextField(max_length=500)

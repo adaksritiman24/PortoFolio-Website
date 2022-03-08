@@ -14,11 +14,12 @@
                 <a href="#contact-section" class="btn btn-success btn-lg" id="contact-btn">Contact Me</a>
             </div>
             <div class="mypic d-flex justify-content-center">
-                <svg height="400px" width="400px">
+                <!-- <svg height="400px" width="400px">
                     <polygon points="40,198 0,400 360,400, 280,140" style="fill:rgba(83, 73, 231, 0.6);"
                         stroke-linejoin: "round" />
-                    <image href="/static/imgs/my-img.png" x="0" y="85" height="330" width="370" />
-                </svg>
+                        <image href="/static/imgs/my-img.png" x="0" y="85" height="330" width="370" />
+                    </svg> -->
+                <img src="static/imgs/my-img.png" alt="NF" />    
             </div>
 
         </div>
@@ -94,28 +95,29 @@
 </div>
 
 <div id="contact-section">
-    <div class="c-left">
+    <form class="c-left" method="post">
+        {% csrf_token %}
         <div>
             <span>Contact Me</span>
             <span><i class="fa-solid fa-square-phone-flip"></i></span>
         </div>
         <hr>
         <div class="contacts-holder">
-            <div><input type="text"  placeholder="First Name" name="fname" ></div>
-            <div><input type="text"  placeholder="Last Name" name="lname" ></div>
-            <div><input type="email" placeholder="Email"  name="email" ></div>
-            <div><textarea name="message" id="" cols="30" rows="10" placeholder="Message"></textarea></div>
+            <div><input required type="text"  placeholder="First Name" name="fname" ></div>
+            <div><input required type="text"  placeholder="Last Name" name="lname" ></div>
+            <div><input required type="email" placeholder="Email"  name="email" ></div>
+            <div><textarea name="message" id="" cols="30" rows="10" placeholder="Message" required></textarea></div>
         </div>
         <div>
-            <button class="send-btn"><i class="fa-solid fa-paper-plane"></i> Send</button>
+            <button type="submit" class="send-btn"><i class="fa-solid fa-paper-plane"></i> Send</button>
         </div>
-    </div>
+    </form>
     <div class="c-right">
         <div class="media-handles">
-            <div  onclick="sendToPage()" ><i class="fa-brands fa-facebook-square" style="color: rgb(23, 85, 179);"></i></div>
-            <div  onclick="sendToPage()" ><i class="fa-brands fa-youtube" style="color: rgb(255, 0, 0);"></i></div>
+            <div  onclick="sendToPage('hi-in.facebook.com/sritiman.adak.77?comment_id=Y29tbWVudDozOTMwMzE4NzE2OTk1MDYyXzM5MzA1NDc0NTAzMDU1MjI%3D')" ><i class="fa-brands fa-facebook-square" style="color: rgb(23, 85, 179);"></i></div>
+            <div  onclick="sendToPage('www.youtube.com/channel/UCC7npqC5Mk6s16MejB1xqdw/featured')" ><i class="fa-brands fa-youtube" style="color: rgb(255, 0, 0);"></i></div>
             <div  onclick="sendToPage()" ><i class="fa-brands fa-instagram-square" style="color: rgb(240, 44, 119);"></i></div>
-            <div  onclick="sendToPage()" ><i class="fa-brands fa-linkedin" style="color: rgb(27, 27, 109);"></i></div>
+            <div  onclick="sendToPage('in.linkedin.com/in/sritiman-adak-0119a31b3')" ><i class="fa-brands fa-linkedin" style="color: rgb(27, 27, 109);"></i></div>
         </div>
         <div class="email-info">
             <div><i class="fa-solid fa-envelope"></i> sritiman24official@gmail.com</div>
@@ -128,4 +130,10 @@
 <footer>
 
 </footer>
+{% for message in messages %}
+<div class="alert alert-warning alert-dismissible fade show alert-style" role="alert">
+    {{message}}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endfor %}
 {% endblock %}
