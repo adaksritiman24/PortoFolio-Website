@@ -29,3 +29,17 @@ const moveSelector=(type)=>{
         selector.style.transform = "translateX(68px)";
     }
 }
+
+//run logo
+
+const turnLogo = ()=>{
+    var yRot = 0;
+    var speed = 90;
+    cube = document.getElementById("cube");
+    setInterval(()=>{
+        yRot +=speed;
+        cube.style.transform = `rotateY(${yRot}deg)`;
+    }, 3000);
+}
+
+turnLogo();
