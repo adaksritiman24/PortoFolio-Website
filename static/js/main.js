@@ -1,9 +1,9 @@
 console.log("main.js");
 document.getElementById('body').onscroll = function myFunc(){
-    let pos = -1* parseInt(document.documentElement.scrollTop)*1.5 + "px";
-    document.getElementById('bg-banner').style.backgroundPositionY = pos;
+    // let pos = -1* parseInt(document.documentElement.scrollTop)*1.3 + "px";
+    // document.getElementById('bg-banner').style.backgroundPositionY = pos;
     if(document.documentElement.scrollTop > 600){
-        document.getElementById('navbar-id').style.backgroundColor = "rgba(20, 20, 20,0.9)"
+        document.getElementById('navbar-id').style.backgroundColor = "rgba(20, 20, 20,0.6)"
     }else{
         document.getElementById('navbar-id').style.backgroundColor = "rgba(20, 20, 20,0.4)"
     }

@@ -2,6 +2,9 @@
 {% load static %}
 {% block content %}
 <div class="banner" id="bg-banner">
+    <div class="background">
+
+    </div>
     <div class="container">
         <div class="b-center">
             <div class="myinfo">
@@ -30,6 +33,9 @@
     </div>
 </div>
 <div class="container">
+    <div class="pr-head">
+        <h2 class="mt-4"><i class="fa-solid fa-ribbon"></i> My Projects</h2>
+    </div>
     <div class="row justify-content-center align-item-center m-2" style="transition: 0.5s;">
         {% for project in projects %}
         <a class="col-md-5 project-banner m-3" href="{{project.link}}">
@@ -77,6 +83,24 @@
         </div>
     </div>
 </div>
+
+<!-- skill -->
+<div class="skills-section">
+    <div>
+        <p>Technical and Programming Skills</p>
+    </div>
+    <div>
+        <div> <img src="static/imgs/tech/c.png" alt="" />  <p>C</p> </div>
+        <div> <img src="static/imgs/tech/java.png" alt="" />  <p>Java</p> </div>
+        <div> <img src="static/imgs/tech/py.png" alt="" />  <p>Python</p> </div>
+        <div> <img src="static/imgs/tech/html.png" alt="" />  <p>HTML</p> </div>
+        <div> <img src="static/imgs/tech/css.png" alt="" />  <p>CSS</p> </div>
+        <div> <img src="static/imgs/tech/js.png" alt="" /> <p>JavaScript</p> </div>
+        <div> <img src="static/imgs/tech/dj.png" alt="" />  <p>Django</p> </div>
+        <div> <img src="static/imgs/tech/react.png" alt="" />  <p>React Js</p> </div>
+        <div> <img src="static/imgs/tech/mysql.png" alt="" />  <p>MySQL</p> </div>
+    </div>
+</div>
 <div class="location-section">
     <div class="location-info">
         <h2><i class="fa-solid fa-map-location-dot"></i> Location</h2>
@@ -122,13 +146,13 @@
         <div class="email-info">
             <div><i class="fa-solid fa-envelope"></i> sritiman24official@gmail.com</div>
             <div><i class="fa-solid fa-square-phone"></i> +91 6289403930</div>
-            
+            <div onclick="sendToPage('www.github.com/adaksritiman24')" style="cursor: pointer;"><i class="fa-brands fa-github" ></i> adaksritiman24</div>
         </div>
     </div>
     
 </div>
 <footer>
-
+    <p>CopyrightⒸ2022-SritimaAdak</p>
 </footer>
 {% for message in messages %}
 <div class="alert alert-warning alert-dismissible fade show alert-style" role="alert">
